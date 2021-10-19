@@ -61,6 +61,11 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
    if(num1 < num2){
       maiorNumero = num2
       diferenca = num2 - num1
+      if (num2 % num1) {
+         
+      }else{
+
+      }
    }else{
       maiorNumero = num1
       diferenca = num1 - num2
