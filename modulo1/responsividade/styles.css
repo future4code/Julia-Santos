@@ -6,11 +6,11 @@
 
 header{
     background-color:rosybrown;
-    height: 60px;
+    height: 58px;
     display:flex;
     justify-content:space-between;
     align-items: center;
-    padding: 8px;
+    padding: 18px;
     flex-direction: row-reverse;
 }
 
@@ -91,7 +91,7 @@ h1{
 }
 
 img{
-    width: 100px;
+    width: 18px;
 }
 
 .lupa-pesquisa{
@@ -104,7 +104,7 @@ img{
     background-color: salmon;
     border: solid 1px;
     border-radius: 15px;
-    width: 249px;
+    width: 158px;
 }
 
 #txtPesquisa{
@@ -128,3 +128,7 @@ h2{
 @media only screen and (max-device-width: 900px) {
     .pag-flex-container { width:100%; }
       }
+
+#txtPesquisa{
+    border-radius: 30px;
+}
