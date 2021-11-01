@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+
+.page-flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.confeitaria{
+    display: flex;
+    background-color:mediumvioletred;
+}
+
+.primeira-seta{
+    width: 18px;
+    margin-left: 60%;
+    position: relative;
+    right: 45px;
+    top: 0px;
+}
+
+.segunda-seta{
+    width: 18px;
+    margin-left: 56%;
+    position: relative;
+    right: 73px;
+    top: 0px;
+}
+
+.terceira-seta{
+    width: 18px;
+    position: relative;
+    left: 25px;
+    top: 0px;
+}
+
+.quarta-seta{
+    width: 18px;
+    margin-left: 61%;
+    position: relative;
+    right: 48px;
+    top: 0;
+}
+.item-menu{
+    display: flex
+}
+
+header{
+    background-color: mediumvioletred;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    flex-direction: row-reverse;
+}
+
+img{
+    width: 200px;
+}
+
+main{
+    background-color:lightyellow;
+    flex-grow: 1;
+    height: 95%;
+    width: 100%;
+    display: flex;
+}
+
+nav{
+    background-color: lightpink;
+    width: 20%;
+}
+
+section{
+    background-color: lightsteelblue;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background-color: mediumvioletred;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.bolo-nome{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.flex-bolo{
+    display: flex;
+}
+
+.casa-home{
+    width: 20px;
+    margin-right: 22px;
+    position: relative;
+    left: 4px;
+    top: 0px;
+}
+
+.bala-produto{
+    width: 20px;
+    margin-right: 20px;
+    position: relative;
+    left: 3px;
+    top: 1px;
+}
+
+.carrinho-compra{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    position: relative;
+    left: 4px;
+    top: 0px;
+}
+
+/* a.carrinho-compra{
+    position: relative;
+    top: -80px;
+} */
+
+.perfil-boneco{
+    width: 22px;
+    margin-right:15px;
+    position: relative;
+    left: 4px;
+    top: 0px;
+}
+
+/* a.perfil-boneco{
+    position: relative;
+    top: -40px;
+} */
+
+/* a.perfil-boneco{
+    position: relative;
+    top: -50px;
+} */
+
+.bolo-decorado-flex-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.item-bolo-decorado-flex{
+    margin: 6px 10px 8px 35px;
+    width: 200px;
+    border: 1px solid white;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 1em darkgrey;
+}
+
+.foto-bolo-decorad0{
+    width: 236px;
+    margin-bottom: 5px;
+}
+
+p{
+    font-size: small;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
