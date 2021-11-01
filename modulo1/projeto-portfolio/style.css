@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2? family = Roboto: wght @ 100 & display = swap');
+
+body{
+    background-color:#F1948A;
+    margin: 0px;
+    font-family:'Roboto', sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#menu{
+    background-color:#27AE60;
+    padding: 26px 0px 26px 155px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#conteudo{
+    padding-top: 50px;
+    width: 100%;
+    height:75vh;
+}
+
+#footer{
+    background-color: #27AE60;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#sobre-mim{
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+#instituicoes{
+    margin-left: 60px;
+    margin-top: 36px;
+    width: 100%;
+}
+
+#galeria{
+    margin-left:60px;
+    margin-top: 36px;
+    width: 100%;
+}
+
+#habilidades{
+    margin-left:60px;
+    margin-top: 36px;
+    width: 100%;
+}
+
+#formulario{
+    margin-left:60px;
+    margin-top: 36px;
+    width: 100%;
+    padding-bottom: 90px;
+}
+
+.botao-menu{
+    margin-right: 100px;
+    color: #EC7063;
+}
+
+.titulo-sobre{
+    text-align:center;
+    padding-top: 38px;
+}
+
+.paragrafo-sobre{
+    margin-left: 76px;
+    margin-right: 10px;
+}
+
+label{
+    margin-right: 8px;
+}
+
+.campo-nome{
+    margin-bottom: 20px;
+}
+
+.campo-email{
+    margin-bottom: 20px;
+}
+
+.campo-email{
+    margin-bottom: 20px;
+}
+
+.campo-mensagem{
+    margin-bottom: 20px;
+}
+
+input #nome{
+    width: 230px;
+}
+
+input #email{
+    width: 233px;
+}
+
+input #mensagem{
+    width: 192px;
+}
+
+.imagem{
+    width: 30px;
+    margin-left: 95px;
+    padding: 18px;
+}
+
+.texto-projeto{
+    margin-left: 59px;
+    top: 40px;
+}
+
+.imagem-projeto{
+    width: 600px;
+    height: 345px;
+}
+
+.imagem-projeto-css{
+    width: 600px;
+    height: 345px;
+    position: relative;
+    left: 400px;
+    top: 60px;
+}
+
+#projeto01{
+    position:fixed;
+}
