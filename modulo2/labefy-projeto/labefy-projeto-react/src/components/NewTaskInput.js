@@ -1,25 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const NewTaskInput = ({ onSubmit }) => {
+const NewTaskInput = ({savedata, props}) => {
 
-  const [newItem, setNewItem] = useState('');
+//   state = {
+//     artistaOuBanda:"",
+//     musicaEscolhida:"",
+//     linkDaMusica:""
 
-  function setNewTask({target}) {
-    setNewItem(target.value);
-  }
+// }
 
-  function submit(e) {
-    e.preventDefault();
-    onSubmit(newItem);
-  }
+
+  
 
   return (
     <div>
-      <form onSubmit={submit}>
+      <h2>Adicionar Musica</h2>
+      <form >
         <input
           className="Todo-input"
+          placeholder="Digite o nome do artista ou banda."
+          value={props.artistaOuBanda}
+          // onChange={handleartistaOuBanda}
+        />
+         <input
+          className="Todo-input"
           placeholder="Digite uma nova musica."
-          onChange={setNewTask}
+          // onChange={handlemusicaEscolhida}
+        />
+         <input
+          className="Todo-input"
+          placeholder="Digite o link da musica."
+          // onChange={handlelinkDaMusica}
         />
         <button type="submit">
           Adicionar

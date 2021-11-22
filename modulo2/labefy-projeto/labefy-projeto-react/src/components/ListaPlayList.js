@@ -1,7 +1,6 @@
 import React from 'react';
 
-const ListItem = ({name,onDelete}) => {
-  console.log(name)
+const ListItem = ({name, onDelete, id}) => {
   return (
     <div className="Item-container">
       <h1>{name}</h1>
