@@ -1,23 +1,29 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import {useState, useEffect } from "react";
 
-export const useRequestData = (url) => {
-    const [data, setData] = useState(undefined);
+export default function App() {
+    const [data, setData] = useState([])
 
-    const getViagens = () => {
+    const getData = () => {
         axios
-        .get(url)
+        .post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/populate")
         .then((res) => {
             setData(res.data);
         })
-        .catch((error) =>{
+        .catch((error) => {
             console.log(error);
         });
     };
 
     useEffect(() => {
-        getViagens();
-    }, [url]);
+        getData();
+    }, []);
 
-    return data
+    console.log(data)
+
+    return (
+        <div>
+            Trips on the World
+        </div>
+    )
 }
