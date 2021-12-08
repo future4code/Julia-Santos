@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import {URL_BASE} from "./constants/url";
+import { useRequestData } from "./Hooks/useRequestData";
 import './App.css';
 
-function App() {
+export default function App() {
+  const viagens = useRequestData(URL_BASE);
+  const detalhesViagens = useRequestData(`${URL_BASE}/trip/:id`);
+  // const novasViagens = useRequestData(`${URL_BASE}/trips`);
+
+  
+
+  const viagensList = viagens && viagens.map((via, index) => {
+    return <li key={index}>{via.name}</li>
+  });
+
+  console.log(detalhesViagens)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Inicio do projeto 
-        </a>
-      </header>
+    <div>
+      <h1>Viagens pelo Mundo</h1>
+      {viagensList}
     </div>
   );
 }
-
-export default App;
