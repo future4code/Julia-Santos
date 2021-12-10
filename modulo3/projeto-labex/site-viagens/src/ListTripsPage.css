@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight:normal;
+    font-size: 16px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 135px 1fr 35px;
+    min-height: 100vh;
+}
+
+#container-header {
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-home {
+    text-align: center;
+}
+
+#menu-home {
+    text-align: center;
+}
+
+#menu-horizontal ul {
+    display: inline;
+    padding: 2.5px;
+    font-weight: bold;
+    color: black;
+} 
+
+
+#container-footer p {
+    font-size: 12px;
+    color: #fff;
+}
+
+#menu-horizontal ul li{
+    display: inline;
+    padding: 2.5px;
+    font-weight: bold;
+    color: green;
+}
+
+#menu-horizontal a:hover {
+    background-color: pink ;
+    padding: 3.5px 4px;
+    font-size: 16px;
+    color: red;
+
+}
+
+#container-footer {
+    background-color:red;
+    padding: 1%;
+    text-align: center;
+    height: 60px;
+}
+
+#container-footer {
+    background-color: #3498DB;
+    padding: 1%;
+    text-align: center;
+    height: 60px;
+}
+
+.card-viagens-flex{
+    margin: 10px 10px 12px 30px;
+    width: 34%;
+    border: 1px solid white;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 1em darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.viagens-flex-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.item{
+    flex: 1 1 0%;
+}

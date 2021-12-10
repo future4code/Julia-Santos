@@ -1,24 +1,40 @@
-import {URL_BASE} from "./constants/url";
-import { useRequestData } from "./Hooks/useRequestData";
-import './App.css';
+import axios from  "axios";
+import {useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
+import ListTripsPage from "./page/ListTripsPage.js";
+import HomePage from "./page/HomePage.js";
+import AdminHomePage from "./page/AdminHomePage";
+import ApplicationFormPage from "./page/ApplicationFormPage";
+import CreateTripPage from "./page/CreateTripPage";
+import LoginPage from "./page/LoginPage";
+import TripDetails from "./page/TripDetailsPage"
 
-export default function App() {
-  const viagens = useRequestData(URL_BASE);
-  const detalhesViagens = useRequestData(`${URL_BASE}/trip/:id`);
-  // const novasViagens = useRequestData(`${URL_BASE}/trips`);
+const App = () => {
+     useEffect(() => {
+    }, []);
 
-  
+return(
 
-  const viagensList = viagens && viagens.map((via, index) => {
-    return <li key={index}>{via.name}</li>
-  });
+    <Router>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/ListTripPage" element={<ListTripsPage />} />
+            <Route path="/AdminHomePage" element={<AdminHomePage />} />
+            <Route path="/ApplicationFormPage" element={<ApplicationFormPage />} />
+            <Route path="/CreateTripPage" element={<CreateTripPage />} />
+            <Route path="/LoginPage" element={<LoginPage />} />
+            <Route path="/TripDetails" element={<TripDetails/>} />
 
-  console.log(detalhesViagens)
 
-  return (
-    <div>
-      <h1>Viagens pelo Mundo</h1>
-      {viagensList}
-    </div>
-  );
+
+
+
+
+        </Routes>
+  </Router>
+    
+       
+    )
 }
+
+export default App;
