@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import '../ListTripsPage.css';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function ListTripsPage() {
@@ -26,17 +27,20 @@ export default function ListTripsPage() {
     useEffect(() => {
         getTrips();
     }, [])
+    
 
-    //console.log()
-    // let lista = trips.trips
-    // lista?.map((item)=>{
-    //     console.log(item)
-    // })
+        const navigate = useNavigate();
+ 
+        const goToHomePage = () => {
+            navigate("/")
+        }
+    
     const listTrips = trips && trips.trips.map((trip, index) => {
         console.log("Log do Trip", trip)
         console.log("log do index", index)
         return <div class="viagens-flex-container">
                     <div class="card-viagens-flex" key={index}>
+                        <br/>
                         <h2 class="item"> Nome: {trip.name}</h2>
                         <br />
                         <p class="item">Descrição: {trip.description}</p>
@@ -46,6 +50,7 @@ export default function ListTripsPage() {
                         <p class="item">Duração: {trip.durationInDays} dias</p>
                         <br />
                         <p class="item">Data: {trip.date}</p>
+                        <br/>
                     </div>
                 </div>
     })
@@ -56,29 +61,25 @@ export default function ListTripsPage() {
                 <div id="menu-home">
 
                     <div id="menu-horizontal">
-
                         <ul>
-                            <li>Home</li> |
-                            <li>Carrinho</li>
+                            <li>HOME |</li> 
+                            <li>VIAGENS |</li>
+                            <li>LOGIN |</li>
+
                         </ul>
                     </div>
                 </div>
             </header>
             <main>
-                <h1>Viagens Disponiveis</h1>
+            <button onClick={goToHomePage} class="botao-voltar"> Voltar</button> <button class="botao-inscricao">Inscreva - se</button>
+                <br/>
+                <h1 class="titulo-flex">Viagens Disponiveis</h1>
+                <br/>
                 {listTrips}
             </main>
             <footer id="container-footer">
 
-                <p> Bernado Augusto de Souza 324, Prédio Lindoia 157 | (00) 8436 - 67120 |  spaceclothing@contato.com</p>
-                <div class="redes-sociais">
-                    <a target="_blank" href="https://www.instagram.com/">
-                        <img class="imagem" src="" alt="" />
-                    </a>
-                    <a target="_blank" href="https://www.facebook.com/">
-                        <img class="imagem" src="" />
-                    </a>
-                </div>
+                <p> Bernado Augusto de Souza ©324, Prédio Lindoia 157 | (00) 8436 - 67120 |  labex_trips@contato.com</p>
             </footer>
 
 

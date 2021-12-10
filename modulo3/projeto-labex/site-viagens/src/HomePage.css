@@ -75,30 +75,8 @@ body {
     height: 60px;
 }
 
-.card-viagens-flex{
-    margin: 10px 10px 12px 30px;
-    width: 40%;
-    border: 1px solid white;
-    text-align: center;
-    background: white;
-    box-shadow: 0 0 1em darkgrey;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
 
-.viagens-flex-container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: white;
-}
-.item{
-    flex: 1 1 0%;
-}
-
-.botao-voltar {
+.botao-login {
   align-items: center;
   background-color: #F2E0D5;
   border-radius: 12px;
@@ -126,11 +104,11 @@ body {
   margin-left: 36%;
 }
 
-.botao-voltar:hover {
+.botao-login:hover {
   box-shadow: #F25757 0 0 0 3px, transparent 0 0 0 0;
 }
 
-.botao-inscricao {
+.botao-viagens {
     align-items: center;
     background-color: #F2E0D5;
     border-radius: 12px;
@@ -157,7 +135,7 @@ body {
     touch-action: manipulation;
   }
   
-  .botao-inscricao:hover {
+  .botao-viagens:hover {
     box-shadow: #F25757 0 0 0 3px, transparent 0 0 0 0;
   }
 
@@ -168,5 +146,19 @@ body {
     margin-left: 40%;
     font-family: Inter,sans-serif;
     font-size: 1.2rem;
+    color: #F25757;
+  }
+
+  main {
+    height: 100vh;
+  }
+
+  .texto-home-trip {
+    display: inline;
+    padding: 2.5px;
+    font-weight: bold;
+    margin-left: 40%;
+    font-family: Inter,sans-serif;
+    font-size: 1.8rem;
     color: #F25757;
   }
