@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import '../HomePage.css';
 
 
-
 const HomePage = () => {
     useEffect(() => {
     }, []);
@@ -15,25 +14,18 @@ const HomePage = () => {
                 <div id="menu-home">
 
                     <div id="menu-horizontal">
-                        <ul>
-                            <li>HOME |</li>
-                            <li>VIAGENS |</li>
-                            <li>LOGIN |</li>
-
-                        </ul>
+                    <h1 class="texto-home-trip">TRIPS ON THE WORLD</h1>
                     </div>
                 </div>
             </header>
             <main>
                 <br/>
-            <h1 class="texto-home-trip">TRIPS ON THE WORLD</h1>
-
                 <Link to="/LoginPage" class="botao-login">LOGIN ADMIN</Link> <Link to="/ListTripPage" class="botao-viagens">VIAGENS</Link>
 
             </main>
             <footer id="container-footer">
 
-                <p> Bernado Augusto de Souza ©324, Prédio Lindoia 157 | (00) 8436 - 67120 |  labex_trips@contato.com</p>
+                <p> Bernado Augusto de Souza 324, Prédio Lindoia 157 | (00) 8436 - 67120 |  labex_trips@contato.com</p>
             </footer>
 
         </div>

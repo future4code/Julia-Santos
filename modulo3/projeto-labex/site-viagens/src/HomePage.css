@@ -150,14 +150,14 @@ body {
   }
 
   main {
-    height: 100vh;
+    height: 72vh;
   }
 
   .texto-home-trip {
     display: inline;
     padding: 2.5px;
     font-weight: bold;
-    margin-left: 40%;
+    margin-left: 6%;
     font-family: Inter,sans-serif;
     font-size: 1.8rem;
     color: #F25757;
