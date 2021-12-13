@@ -6,10 +6,7 @@ import { useParams } from "react-router-dom";
 
 const useProtectedPage = () => {
 
-   
-
     const navigate = useNavigate();
-
 
     useEffect(() => {
         const token = localStorage.getItem("token");
@@ -21,6 +18,7 @@ const useProtectedPage = () => {
         // console.log(promps.match.params.id)
 
     }, [])
+    
 }
 
 export const TripDetails = () => {
@@ -30,6 +28,12 @@ export const TripDetails = () => {
     useProtectedPage()
 
     const {id} = useParams()
+
+    const navigate = useNavigate();
+
+    const goToCreateTrip = () => {
+        navigate("/CreateTripPage");
+    }
 
 
     useEffect(() => {
@@ -56,8 +60,8 @@ export const TripDetails = () => {
     
     const listDetails = details?.trip?.candidates.map((candidate, index) => {
 
-        return <div class="viagens-flex-container">
-        <div class="card-viagens-flex" key={index}>
+        return <div class="viajantes-flex-container">
+        <div class="card-viajantes-flex" key={index}>
             <br/>
             <h2 class="item"> Nome: {candidate.name}</h2>
             <br />
@@ -67,7 +71,9 @@ export const TripDetails = () => {
             <br />
             <p class="item">País: {candidate.country}</p>
             <br />
-            <p class="item">Data: {candidate.applicationText}</p>
+            <p class="item">Data: {candidate.applicationText} </p>
+            <button class="botao-aprovar">Aprovar</button> 
+            <button class="botao-reprovar">Reprovar</button>
             <br/>
         </div>
     </div>
@@ -86,9 +92,11 @@ export const TripDetails = () => {
                 </div>
             </header>
             <main>
-                <button  class="botao-voltar"> Voltar</button> <button class="botao-inscricao">Criar Viagem</button>
+                <button  class="botao-voltar-pag"> Voltar</button> 
+                <button class="botao-inscricao" onClick={goToCreateTrip}>Criar Viagem</button> 
+                <button class="botao-logout">Logout</button>
                 <br />
-                <h1 class="titulo-flex">Viagens</h1>
+                <h1 class="titulo-flex-h1">Viagens</h1>
                 <br />
                 <div class="viagens-flex-container">
                     <div class="card-viagens-flex">
@@ -106,9 +114,13 @@ export const TripDetails = () => {
                         {/* <Link to="" class="botao-login">LOGIN ADMIN</Link> */}
                     </div >
                 </div>
-                <h1>Candidatos Pendentes</h1>
-
-                {listDetails}
+                <br/>
+                <h1 class="titulo-flex-candidato">Candidatos Pendentes</h1>
+                <br/>
+                <div>
+                {listDetails} 
+                </div>
+                
             </main>
             <br />
             <footer id="container-footer-list">

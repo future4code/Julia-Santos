@@ -61,9 +61,9 @@ export const LoginPage = () => {
                     
                     <div>
                         <form onSubmit={onSubmitLogin}>
-                            <h1>Login</h1>
-                            <div class="campo-email">
-                                <input
+                            <br/>
+                            <div>
+                                <input class="campo-email"
                                     placeholder="E-mail"
                                     type="email"
                                     value={email}
@@ -71,15 +71,15 @@ export const LoginPage = () => {
                                 />
                             </div>
                             <br />
-                            <div class="campo-password">
-                                <input
+                            <div >
+                                <input class="campo-password"
                                     placeholder="Password"
                                     type="password"
                                     value={password}
                                     onChange={onChangePassword}
                                 />
                             </div>
-                            <button>Enviar</button>
+                            <button class="enviar-login">Enviar</button>
                         </form>
                     </div>
                     <br/>
