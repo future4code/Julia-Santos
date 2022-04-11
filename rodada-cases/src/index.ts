@@ -150,7 +150,12 @@ app.get("/listaCompeticao", (req: Request, res: Response)=>{
       }
   })
 
+  if(listCompeticao.length === 0 ){
+    res.status(200).send("Competições vazias");
+  }else{
     res.status(200).send(listCompeticao);
+  }
+
   } catch (error: any) {
   
     res.status(errorCode).send({ message: error.message });
@@ -181,7 +186,13 @@ app.get("/listaRanqueadaCompeticao", (req: Request, res: Response)=>{
     listCompeticao.forEach(function(itm:any){
       itm.posicao = listCompeticao.findIndex((x:any) => x.id === itm.id) + 1;
      });
-    res.status(200).send(listCompeticao);
+
+    if(listCompeticao.length === 0 ){
+        res.status(200).send("Competição vazia");
+    }else{
+        res.status(200).send(listCompeticao);
+    }
+
   } catch (error: any) {
   
     res.status(errorCode).send({ message: error.message });
