@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "6d758fd9-c670-419d-b701-cecabdc4c39a",
+		"name": "wirecard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3003/novoCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Amazon\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/novoCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"novoCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3003/novoComprador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Julia Oliveira\",\n    \"email\":\"jucs.santos.oliveira@gmail.com\",\n    \"cpf\":\"123874323423\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/novoComprador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"novoComprador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3003/pagamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Julia Oliveira\",\n    \"aniversario\":\"01/07/1998\",\n    \"documento\":\"1238743234231\",\n    \"bandeira\":\"Visa\",\n    \"expira\":\"01/06/2029\",\n    \"cvv\":\"123\",\n    \"numero\":\"1234432156788767\",\n    \"metodo\":\"Cartao Credito\",\n    \"valor\":300000.00,\n    \"comprador\":1,\n    \"cliente\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/pagamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"pagamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3003/pagamento-Boleto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"valor\":300000.00,\n    \"comprador\":1,\n    \"cliente\":1,\n    \"metodo\": \"Boleto\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/pagamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"pagamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3003/pagamentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/pagamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"pagamentos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
