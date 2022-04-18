@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "717224b3-4454-4f01-be78-677005ea9725",
+		"name": "amaro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3003/cadastrarProdutos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"products\": [\n      {\n        \"id\": 8371,\n        \"name\": \"VESTIDO TRICOT CHEVRON\",\n        \"tags\": [\"balada\", \"neutro\", \"delicado\", \"festa\"]\n      },\n      {\n        \"id\": 8367,\n        \"name\": \"VESTIDO MOLETOM COM CAPUZ MESCLA\",\n        \"tags\": [\"casual\", \"metal\", \"metal\"]\n      },\n      {\n        \"id\": 8363,\n        \"name\": \"VESTIDO CURTO MANGA LONGA LUREX\",\n        \"tags\": [\"colorido\", \"metal\", \"delicado\", \"estampas\", \"passeio\"]\n      },\n      {\n        \"id\": 8360,\n        \"name\": \"VESTIDO FEMININO CANELADO\",\n        \"tags\": [\"workwear\", \"viagem\", \"descolado\"]\n      },\n      {\n        \"id\": 8358,\n        \"name\": \"VESTIDO REGATA FEMININO COM GOLA\",\n        \"tags\": [\"moderno\", \"inverno\", \"liso\", \"basics\"]\n      },\n      {\n        \"id\": 8314,\n        \"name\": \"VESTIDO PLISSADO ACINTURADO\",\n        \"tags\": [\"casual\", \"viagem\", \"delicado\"]\n      },\n      {\n        \"id\": 8311,\n        \"name\": \"VESTIDO SLIPDRESS CETIM\",\n        \"tags\": [\"balada\", \"metal\", \"boho\", \"descolado\", \"passeio\"]\n      },\n      {\n        \"id\": 8310,\n        \"name\": \"VESTIDO CURTO PONTO ROMA MANGA\",\n        \"tags\": [\"casual\", \"metal\", \"delicado\", \"descolado\", \"elastano\", \"estampas\"]\n      },\n      {\n        \"id\": 8309,\n        \"name\": \"VESTIDO MOLETOM COM CAPUZ\",\n        \"tags\": [\"inverno\", \"liso\", \"casual\", \"descolado\"]\n      },\n      {\n        \"id\": 8301,\n        \"name\": \"VESTIDO LONGO CREPE MANGA COMPRIDA\",\n        \"tags\": [\"casual\", \"metal\", \"delicado\", \"descolado\"]\n      },\n      {\n        \"id\": 8300,\n        \"name\": \"VESTIDO MALHA COM FENDA\",\n        \"tags\": [\"balada\", \"metal\", \"estampas\", \"moderno\"]\n      },\n      {\n        \"id\": 8293,\n        \"name\": \"VESTIDO CURTO VELUDO RECORTE GOLA\",\n        \"tags\": [\"colorido\", \"viagem\", \"delicado\", \"descolado\", \"inverno\"]\n      },\n      {\n        \"id\": 8291,\n        \"name\": \"VESTIDO MANGA COMPRIDA COSTAS\",\n        \"tags\": [\"inverno\", \"estampas\", \"delicado\", \"descolado\", \"casual\", \"passeio\", \"basics\"]\n      },\n      {\n        \"id\": 8264,\n        \"name\": \"VESTIDO CURTO VELUDO CRISTAL\",\n        \"tags\": [\"casual\", \"viagem\", \"boho\", \"neutro\", \"festa\"]\n      },\n      {\n        \"id\": 8119,\n        \"name\": \"VESTIDO BABADOS KNIT\",\n        \"tags\": [\"moderno\", \"metal\", \"descolado\", \"elastano\", \"festa\", \"colorido\"]\n      },\n      {\n        \"id\": 8110,\n        \"name\": \"VESTIDO CUT OUT TRICOT\",\n        \"tags\": [\"casual\", \"colorido\", \"delicado\", \"descolado\", \"viagem\", \"inverno\"]\n      },\n      {\n        \"id\": 8109,\n        \"name\": \"VESTIDO BABADOS HORIZONTAIS\",\n        \"tags\": [\"moderno\", \"boho\", \"festa\", \"descolado\", \"colorido\"]\n      },\n      {\n        \"id\": 8104,\n        \"name\": \"VESTIDO BABADO TURTLENECK\",\n        \"tags\": [\"casual\", \"metal\", \"delicado\", \"neutro\", \"basics\", \"inverno\", \"viagem\"]\n      },\n      {\n        \"id\": 8091,\n        \"name\": \"VESTIDO MIDI VELUDO DECOTADO\",\n        \"tags\": [\"couro\", \"veludo\", \"passeio\", \"viagem\"]\n      },\n      {\n        \"id\": 8083,\n        \"name\": \"VESTIDO LONGO ESTAMPADO\",\n        \"tags\": [\"couro\", \"estampado\", \"passeio\", \"viagem\"]\n      },\n      {\n        \"id\": 8080,\n        \"name\": \"VESTIDO CURTO RENDA VISCOSE\",\n        \"tags\": [\"neutro\", \"workwear\", \"moderno\", \"descolado\", \"liso\", \"elastano\"]\n      },\n      {\n        \"id\": 7613,\n        \"name\": \"VESTIDO LONGO BABADO\",\n        \"tags\": [\"casual\", \"liso\", \"passeio\", \"colorido\", \"boho\"]\n      },\n      {\n        \"id\": 7533,\n        \"name\": \"VESTIDO COTTON DOUBLE\",\n        \"tags\": [\"balada\", \"liso\", \"moderno\", \"descolado\"]\n      },\n      {\n        \"id\": 7518,\n        \"name\": \"VESTIDO CAMISETA FANCY\",\n        \"tags\": [\"casual\", \"liso\"]\n      },\n      {\n        \"id\": 7516,\n        \"name\": \"VESTIDO WRAP FLEUR\",\n        \"tags\": [\"neutro\", \"liso\", \"basics\", \"viagem\"]\n      }\n    ]\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3003/cadastrarProdutos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"cadastrarProdutos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3003/procurarProdutos?id=8080&name=VESTIDO&tag=teste tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/procurarProdutos?id=8080&name=VESTIDO&tag=teste tag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"procurarProdutos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8080"
+						},
+						{
+							"key": "name",
+							"value": "VESTIDO"
+						},
+						{
+							"key": "tag",
+							"value": "teste tag"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
