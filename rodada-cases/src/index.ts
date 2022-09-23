@@ -1,5 +1,7 @@
 import express, { Request, Response } from 'express'
 import cors from 'cors'
+import { AddressInfo } from "net";
+import connection from "./connection";
 
 type competicao = {
   id: number;
@@ -23,29 +25,37 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.post("/cadastrarCompeticao", (req: Request, res: Response) => {
+const cadastrarCompeticao = async (
+  nome: string,
+): Promise<void> => {
+  await connection.raw(`
+        INSERT INTO competicoes
+          (competicao)
+        VALUES (
+        "${nome}"
+       );
+    `);
+};
+
+app.post("/cadastrarCompeticao",  async (req:Request,res:Response): Promise<void> =>{
   let errorCode: number = 400;
+
   try {
 
     if (!req.body?.competicao) {
       errorCode = 422;
       throw new Error("Por favor preencha o campo vazio!");
     }
-    const data = {
-      "id":competicoes.length + 1,
-      "competicao": req.body?.competicao,
-      "status": "",
-      "resultados": []
-    };
-    
-    competicoes.push(data);
 
-    res.status(201).send({ message: "Competição salva com sucesso." });
-  } catch (error: any) {
-    res.status(errorCode).send({ messagem: error.message });
-  }  
+   await cadastrarCompeticao(
+     req.body.nome,
+   );
+
+   res.status(201).send("Competicao cadastrado!");
+ } catch (error: any) {
+   res.status(errorCode).send(error.sqlMessage || error.message);
+  }
 });
-
 
 app.put("/iniciarCompeticao", (req: Request, res: Response) => {
   let errorCode: number = 400;
