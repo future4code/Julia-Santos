@@ -378,7 +378,7 @@ app.post("/pagamento",  async (req:Request,res:Response): Promise<void> =>{
         
       )
         
-      res.status(201).send(code);
+      res.status(201).send("Cadastro de pagamento feito com sucesso, código barra: " + code);
     }
     
 
