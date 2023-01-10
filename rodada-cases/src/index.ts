@@ -2,9 +2,6 @@ import express, { Request, Response } from 'express'
 import cors from 'cors'
 import { AddressInfo } from "net";
 import connection from "./connection";
-
-
-
 const app = express()
 app.use(express.json())
 app.use(cors())
@@ -140,7 +137,7 @@ const cadastrarResultado = async (
             fk_id_resultado
           )
           VALUES(
-            (select id from competicoes where competicao = "${data.competicao}"),
+            (select MAX(id) from competicoes where competicao = "${data.competicao}"),
             (select LAST_INSERT_ID())
           );
     `);
@@ -217,9 +214,11 @@ app.put("/cadastrarResultado", async(req: Request, res: Response): Promise<void>
     }
     const competicoesAbertas = await consultaCompeticaoAberta(data.competicao);
     
-    //await cadastrarResultado(data);
-    //console.log(competicoesAbertas?.competicao);
+
+    // await cadastrarResultado(data);
+    // console.log(competicoesAbertas?.competicao);
     if(competicoesAbertas?.competicao !== undefined){
+      console.log("encontrei o erro");
       await cadastrarResultado(
         data
       );
@@ -282,13 +281,15 @@ app.get("/listaRanqueadaCompeticao", async(req: Request, res: Response): Promise
 
     
         if(data.ordenacao === "Crescente"){
-           competicao =  await consultaClassificaoCompeticaoAsc(data)
+           competicao =  await consultaClassificaoCompeticaoAsc(data);
          }else{
-          competicao =  await consultaClassificaoCompeticaoDesc(data)         }
+          competicao =  await consultaClassificaoCompeticaoDesc(data);         
+        }
       if(competicao.length === 0 ){
         res.status(200).send("Competicao vazia");
       }else{
-        res.status(200).send(competicao);
+        console.log(competicao[0])
+        res.status(200).send(competicao[0]);
       }
 
   } catch (error: any) {
