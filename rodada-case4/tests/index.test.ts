@@ -1,61 +1,37 @@
 
-test('GET /pagamentios', async () => {
+test('GET /listaPokemons', async () => {
     const axios = require('axios');
-    const response = await axios({method:'GET',url:'http://localhost:3003/pagamentos'});
+    const response = await axios({method:'GET',url:'http://localhost:3003/listaPokemons'});
     expect(response.data).toBeTruthy();
     expect(response.data.length).toBeTruthy();
 });
 
-test('POST /novoCliente', async () => {
+
+test('GET /listaPokemonsFiltraNomeDesc', async () => {
     const axios = require('axios');
-    const response = await axios({method:'POST',url:'http://localhost:3003/novoCliente',data:{
-        "nome":"Amazon"
-    }});
-    expect(response.status).toEqual(201)
+    const response = await axios({method:'GET',url:'http://localhost:3003/listaPokemons?filterName=nome&Order=Desc'});
     expect(response.data).toBeTruthy();
     expect(response.data.length).toBeTruthy();
 });
 
-test('POST /novoComprador', async () => {
+test('GET /listaPokemonsFiltraNomeAsc', async () => {
     const axios = require('axios');
-    const response = await axios({method:'POST',url:'http://localhost:3003/novoComprador',data:{
-        "nome":"Julia Oliveira",
-        "email":"jucs.santos.oliveira@gmail.com",
-        "cpf":"123874323423"
-    }});
-    expect(response.status).toEqual(201)
+    const response = await axios({method:'GET',url:'http://localhost:3003/listaPokemons?filterName=nome&Order=Asc'});
     expect(response.data).toBeTruthy();
     expect(response.data.length).toBeTruthy();
 });
 
-test('POST /novoPagamentoCartaoCredito', async () => {
+test('GET /listaPokemonsFiltraTipo', async () => {
     const axios = require('axios');
-    const response = await axios({method:'POST',url:'http://localhost:3003/pagamento',data:{
-        "nome":"Julia Oliveira",
-        "aniversario":"01/07/1998",
-        "documento":"1238743234231",
-        "bandeira":"Visa",
-        "expira":"01/06/2029",
-        "cvv":"123",
-        "numero":"1234432156788767",
-        "metodo":"Cartao Credito",
-        "valor":300000.00,
-        "comprador":1,
-        "cliente":1
-    }});
-    expect(response.status).toEqual(201)
+    const response = await axios({method:'GET',url:'http://localhost:3003/listaPokemons?searchField=tipo&searchValue=agua'});
     expect(response.data).toBeTruthy();
     expect(response.data.length).toBeTruthy();
 });
 
-test('POST /novoPagamentoBoleto', async () => {
+test('GET /listaPokemonsFiltrarNome', async () => {
     const axios = require('axios');
-    const response = await axios({method:'POST',url:'http://localhost:3003/pagamento',data:{
-        "valor":300000.00,
-        "comprador":1,
-        "cliente":1,
-        "metodo": "Boleto"
-    }});
-    expect(response.status).toEqual(201)
+    const response = await axios({method:'GET',url:'http://localhost:3003/listaPokemons?searchField=nome&searchValue=charmander'});
     expect(response.data).toBeTruthy();
+    expect(response.data.length).toBeTruthy();
 });
+
